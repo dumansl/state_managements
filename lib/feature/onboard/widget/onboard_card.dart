@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:state_managements/feature/onboard/onboard_model.dart';
 
 class OnBoardCard extends StatelessWidget {
-  const OnBoardCard({super.key, required this.model});
   final OnBoardModel model;
 
+  const OnBoardCard({super.key, required this.model});
   @override
   Widget build(BuildContext context) {
     return Column(

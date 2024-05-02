@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:state_managements/feature/onboard/onboard_model.dart';
 import 'package:state_managements/feature/onboard/widget/onboard_card.dart';
 import 'package:state_managements/product/page_padding.dart';
 
-import 'onboard_model.dart';
 import 'tab_indicator.dart';
 
 part './module/start_fab_button.dart';
 
 class OnBoardView extends StatefulWidget {
-  const OnBoardView({Key? key}) : super(key: key);
+  const OnBoardView({super.key});
 
   @override
-  _OnBoardViewState createState() => _OnBoardViewState();
+  State<OnBoardView> createState() => _OnBoardViewState();
 }
 
 class _OnBoardViewState extends State<OnBoardView> {
-  final String _skipTitle = 'Skip';
+  final String _skipTile = 'Skip';
 
   int _selectedIndex = 0;
 
@@ -91,10 +91,7 @@ class _OnBoardViewState extends State<OnBoardView> {
           builder: (BuildContext context, bool value, Widget? child) {
             return value
                 ? const SizedBox()
-                : TextButton(
-                    onPressed: () {},
-                    child: Text(_skipTitle),
-                  );
+                : TextButton(onPressed: () {}, child: Text(_skipTile));
           },
         ),
       ],
@@ -102,11 +99,8 @@ class _OnBoardViewState extends State<OnBoardView> {
           ? null
           : IconButton(
               onPressed: () {},
-              icon: const Icon(
-                Icons.chevron_left_outlined,
-                color: Colors.grey,
-              ),
-            ),
+              icon:
+                  const Icon(Icons.chevron_left_outlined, color: Colors.grey)),
     );
   }
 

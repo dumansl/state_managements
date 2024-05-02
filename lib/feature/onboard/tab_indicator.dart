@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'onboard_model.dart';
 
 class TabIndicator extends StatefulWidget {
-  const TabIndicator({super.key, required this.selectedIndex});
   final int selectedIndex;
+
+  const TabIndicator({super.key, required this.selectedIndex});
   @override
   State<TabIndicator> createState() => _TabIndicatorState();
 }
